@@ -1,0 +1,6 @@
+# Python ignores
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/

@@ -1,0 +1,10 @@
+{
+  "algo": "ppo",
+  "persona": "hunter",
+  "timesteps": 1000000.0,
+  "grid_size": 10,
+  "seed": 7,
+  "num_envs": 4,
+  "base_logdir": "logs/snake/tensorboar",
+  "base_modeldir": "models/snake"
+}

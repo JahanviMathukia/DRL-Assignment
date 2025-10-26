@@ -1,0 +1,12 @@
+{
+  "algo": "dqn",
+  "persona": "aggressive",
+  "seed": 10,
+  "timesteps": 800000.0,
+  "num_envs": 4,
+  "target_score": 230.0,
+  "eval_freq": 10000,
+  "logdir": "logs",
+  "modeldir": "models",
+  "max_steps": 1000
+}

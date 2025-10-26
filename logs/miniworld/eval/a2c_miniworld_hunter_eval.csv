@@ -1,0 +1,2 @@
+timestamp,algo,persona,episodes,mean_reward,std_reward,mean_steps,success_rate,model_path
+2025-10-26 17:20:54,a2c,hunter,10,-6.128,1.799,300.0,0.0,models/miniworld\a2c_miniworld_hunter_seed7.zip
