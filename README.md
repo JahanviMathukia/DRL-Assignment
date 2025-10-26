@@ -30,35 +30,36 @@ Agents are trained and evaluated across multiple environments using **PPO** and 
 ## 🏗️ Folder Structure
 ```bash
 SOKOBAN-ASSGN/
-├── envs/ # 🧠 Environment definitions & reward logic
+├── envs/ # Environment definitions & reward logic
 │ ├── cartpole/
 │ ├── lunarlander/
 │ ├── miniworld/
 │ └── snake/
 │
-├── logs/ # 📊 Evaluation logs & TensorBoard runs
+├── logs/ # Evaluation logs & TensorBoard runs
 │ ├── cartpole/
 │ ├── lunarlander/
 │ ├── miniworld/
 │ └── snake/
 │
-├── media/ # 🎥 Demo clips
+├── media/ # Demo clips
+│ ├── cartpole/
+│ ├── miniworld/
+│ └── snake/
 |
-├── models/ # 💾 Trained model checkpoints
+├── models/ # Trained model checkpoints
 │ ├── cartpole/
 │ ├── lunarlander/
 │ ├── miniworld/
 │ └── snake/
 │
-├── notebooks/ # 📒 Jupyter notebooks for analysis
-│ ├── miniworld_analysis.ipynb
-│ └── snake_analysis.ipynb
+├── notebooks/ # Jupyter notebooks for analysis
 │
-├── plots/ # 📈 Generated plots and graphs
+├── plots/ # Generated plots and graphs
 │ ├── miniworld/
 │ └── snake/
 │
-├── src/ # ⚙️ Source code (training, evaluation, visualization)
+├── src/ # Source code (training, evaluation, visualization)
 │ ├── train_.py # Training scripts per environment
 │ ├── eval_.py # Evaluation & metric collection scripts (Generates CSV files)
 │ ├── visualize_*.py # Run live visualization or gameplay
@@ -76,10 +77,10 @@ SOKOBAN-ASSGN/
 ## ⚙️ Setup & Installation
 
 ```bash
-# 1️⃣ Create a virtual environment
+# 1. Create a virtual environment
 python -m venv .venv
 source .venv/bin/activate         # (Windows: .venv\Scripts\activate)
 
-# 2️⃣ Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 ```
