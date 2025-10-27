@@ -7,7 +7,6 @@ import numpy as np
 from stable_baselines3 import PPO, A2C
 from envs.miniworld.maze_env import MiniWorldPersonaEnv
 
-# make sure pyglet never tries to open a window
 os.environ["PYOPENGL_PLATFORM"] = "egl"
 os.environ["MINIWORLD_NO_TEXT_LABEL"] = "1"
 
@@ -38,7 +37,6 @@ def main():
     total_r = 0
     step = 0
     while True:
-        # Predict next action
         action, _ = model.predict(obs)
         obs, reward, terminated, truncated, _ = env.step(action)
         total_r += reward
@@ -56,8 +54,7 @@ def main():
         if key == ord('q') or done:
             break
 
-        # Use a small sleep to control playback speed, not 30ms
-        time.sleep(0.01)  # smooth, responsive loop
+        time.sleep(0.01) 
 
     print(f"✅ Finished episode — Steps: {step}, Total Reward: {total_r:.2f}")
     cv2.destroyAllWindows()

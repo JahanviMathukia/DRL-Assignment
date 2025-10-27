@@ -18,7 +18,6 @@ Metrics recorded:
 - final score (# of apples eaten)
 - total steps survived
 - mean reward per step
-- standard deviation (optional)
 """
 
 ALGO_MAP = {"ppo": PPO, "a2c": A2C}
@@ -26,7 +25,7 @@ ALGO_MAP = {"ppo": PPO, "a2c": A2C}
 def evaluate_model(algo, persona, grid_size, episodes, seed, model_dir, csv_out):
     """Run multiple episodes and save evaluation metrics."""
     model_path = os.path.join(model_dir, f"{algo}_snake_{persona}_seed{seed}.zip")
-    print(f"📦 Loading model from: {model_path}")
+    print(f"Loading model from: {model_path}")
 
     # Load model and create environment
     env = SnakeEnv(grid_size=grid_size, reward_mode=persona, render_mode=None, seed=seed)
@@ -60,7 +59,7 @@ def evaluate_model(algo, persona, grid_size, episodes, seed, model_dir, csv_out)
     mean_score = np.mean(all_scores)
     mean_steps = np.mean(all_steps)
 
-    print("\n✅ Evaluation Summary:")
+    print("\nEvaluation Summary:")
     print(f"Mean Reward: {mean_reward:.2f} ± {std_reward:.2f}")
     print(f"Mean Score : {mean_score:.2f}")
     print(f"Mean Steps : {mean_steps:.2f}")
@@ -84,7 +83,7 @@ def evaluate_model(algo, persona, grid_size, episodes, seed, model_dir, csv_out)
                 round(mean_per_step, 4),
             ])
 
-    print(f"\n📁 Saved evaluation results to: {csv_out}")
+    print(f"\nSaved evaluation results to: {csv_out}")
     env.close()
 
 def main():

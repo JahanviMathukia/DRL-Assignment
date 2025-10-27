@@ -13,8 +13,8 @@ for two distinct personas: 'survivor' and 'hunter'.
 
 Features:
 ---------
-- Models saved under: models/snake/<algo>_<persona>_seed<seed>.zip
-- TensorBoard logs under: logs/snake/tensorboard/<algo>_<persona>_seed<seed>/
+- Models saved under: models/snake/
+- TensorBoard logs under: logs/snake/tensorboard/
 - Reproducible seeds
 - Multiple parallel environments for stable training
 """
@@ -40,24 +40,17 @@ def main():
     parser.add_argument("--base_modeldir", type=str, default="models/snake")
     args = parser.parse_args()
 
-    # Construct unique run name and directories
     run_name = f"{args.algo}_snake_{args.persona}_seed{args.seed}"
     logdir = os.path.join(args.base_logdir, run_name)
     model_path = os.path.join(args.base_modeldir, f"{run_name}.zip")
     cfg_path = os.path.join(args.base_modeldir, run_name + "_cfg.json")
 
-    # Create directories
     os.makedirs(logdir, exist_ok=True)
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
-
-    # Set random seed for reproducibility
     set_random_seed(args.seed)
 
-    # Create parallel environments
     env_fns = [make_env(args.persona, args.grid_size, args.seed + i) for i in range(args.num_envs)]
     env = DummyVecEnv(env_fns)
-
-    Algo = ALGO_MAP[args.algo]
 
     # Initialize algorithm
     common_kwargs = dict(
@@ -85,7 +78,6 @@ def main():
     print(f"Training {run_name} for {int(args.timesteps):,} timesteps...")
     model.learn(total_timesteps=int(args.timesteps), progress_bar=True)
 
-    # Save model
     model.save(model_path)
     with open(cfg_path, "w") as f:
         json.dump(vars(args), f, indent=2)

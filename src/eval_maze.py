@@ -12,7 +12,6 @@ def evaluate_model(model, env, n_episodes=10, max_steps=300, algo="ppo", persona
     """Evaluate a trained model and optionally save per-episode results."""
     rewards, steps, successes = [], [], []
 
-    # Create per-episode CSV if requested
     if per_episode_csv:
         os.makedirs(os.path.dirname(per_episode_csv), exist_ok=True)
         with open(per_episode_csv, "w", newline="") as f:

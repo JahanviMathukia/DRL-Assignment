@@ -117,14 +117,14 @@ class SnakeEnv(gym.Env):
             # Living bonus
             reward += 0.1
 
-            # Encourage approaching food (stronger coefficient)
+            # Encourage approaching food
             reward += 0.3 * dist_change
 
             # Small penalty for moving away from food
             if dist_change < 0:
                 reward += 0.1 * dist_change  # negative
 
-            # Gentler wall penalty — only significant near border
+            # wall penalty — only significant near border
             hx, hy = self.snake[0]
             margin = min(hx, hy, self.grid_size - 1 - hx, self.grid_size - 1 - hy)
             wall_penalty = max(0, 1 - margin / (self.grid_size / 2))

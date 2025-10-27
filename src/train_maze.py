@@ -86,7 +86,7 @@ def main():
             normalize_advantage=False,
         )
 
-    print(f"🚀 Training {args.algo.upper()} for persona={args.persona}")
+    print(f"Training {args.algo.upper()} for persona={args.persona}")
     model.learn(total_timesteps=int(args.timesteps))
     model.save(os.path.join(model_dir, f"{args.algo}_miniworld_{args.persona}_seed{args.seed}.zip"))
     print(f"✅ Model saved to {model_dir}")

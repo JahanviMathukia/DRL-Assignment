@@ -54,11 +54,10 @@ def main():
         steps += 1
         env.render()
 
-        # Print score updates every few steps
         if steps % 5 == 0 or done:
             print(f"Step: {steps:>4} | Score: {info['score']:>2} | Total Reward: {total_reward:>6.2f}", end="\r")
 
-        time.sleep(0.1)  # adjust speed
+        time.sleep(0.1) 
 
     print("\n\nEpisode finished.")
     print(f"Total Steps: {steps}, Final Score: {info['score']}, Total Reward: {total_reward:.2f}")
