@@ -210,9 +210,7 @@ class SnakeEnv(gym.Env):
         )
         # outer glow
         pygame.draw.circle(surface, (255, 80, 80), food_center, self.block_size // 2)
-        # bright center
         pygame.draw.circle(surface, (255, 0, 0), food_center, self.block_size // 3)
-        # highlight
         pygame.draw.circle(surface, (255, 200, 200), (food_center[0]-3, food_center[1]-3), self.block_size // 6)
 
         # --- draw snake ---
@@ -229,11 +227,9 @@ class SnakeEnv(gym.Env):
                 pygame.draw.circle(surface, (0, 200, 80),
                                    rect.center, self.block_size // 4)
             else:
-                # softer green body
                 color = (0, 180 - i * 5 if 180 - i * 5 > 80 else 80, 0)
                 pygame.draw.rect(surface, color, rect, border_radius=6)
 
-        # blit everything to window
         self.window.blit(surface, (0, 0))
         pygame.display.flip()
         self.clock.tick(self.metadata["render_fps"])

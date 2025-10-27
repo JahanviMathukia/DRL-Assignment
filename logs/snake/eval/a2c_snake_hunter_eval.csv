@@ -1,4 +1,4 @@
-episode,reward,score,steps,mean_reward_per_step
+episode,algo,persona,reward,score,steps,mean_reward_per_step
 1,a2c,hunter,-10.8,0,5,-2.16
 2,a2c,hunter,-11.0,0,6,-1.8333
 3,a2c,hunter,-11.0,0,6,-1.8333

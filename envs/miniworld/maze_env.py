@@ -58,7 +58,6 @@ class MiniWorldPersonaEnv(gym.Wrapper):
         self.goal_pos = None        # fallback virtual goal (if not in env)
         self.prev_obs = None        # previous frame for curiosity reward
         self._was_colliding = False
-
     
     # Utility functions
     def _quantize_pos(self, pos: np.ndarray) -> Tuple[int, int]:

@@ -1,4 +1,4 @@
-episode,reward,score,steps,mean_reward_per_step
+episode,algo,persona,reward,score,steps,mean_reward_per_step
 1,a2c,survivor,357.595,28,561,0.6374
 2,a2c,survivor,196.124,16,244,0.8038
 3,a2c,survivor,108.666,9,182,0.5971

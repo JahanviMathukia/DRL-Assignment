@@ -1,2 +1,12 @@
-timestamp,algo,persona,episodes,mean_reward,std_reward,mean_steps,success_rate,model_path
-2025-10-26 17:20:54,a2c,hunter,10,-6.128,1.799,300.0,0.0,models/miniworld\a2c_miniworld_hunter_seed7.zip
+episode,algo,persona,reward,score,steps,mean_reward_per_step
+1,a2c,hunter,9.039,0,71,0.1273
+2,a2c,hunter,-8.034,0,300,-0.0268
+3,a2c,hunter,-7.405,0,300,-0.0247
+4,a2c,hunter,-6.687,0,300,-0.0223
+5,a2c,hunter,-7.78,0,300,-0.0259
+6,a2c,hunter,-6.734,0,300,-0.0224
+7,a2c,hunter,-6.474,0,300,-0.0216
+8,a2c,hunter,-4.687,0,165,-0.0284
+9,a2c,hunter,9.98,0,1,9.98
+10,a2c,hunter,-7.587,0,300,-0.0253
+

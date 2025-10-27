@@ -1,2 +1,12 @@
-timestamp,algo,persona,episodes,mean_reward,std_reward,mean_steps,success_rate,model_path
-2025-10-26 17:20:49,ppo,hunter,10,-9.149,0.28,300.0,0.0,models/miniworld\ppo_miniworld_hunter_seed7.zip
+episode,algo,persona,reward,score,steps,mean_reward_per_step
+1,ppo,hunter,6.178,0,300,0.0206
+2,ppo,hunter,-9.0,0,300,-0.03
+3,ppo,hunter,-9.0,0,300,-0.03
+4,ppo,hunter,-9.419,0,300,-0.0314
+5,ppo,hunter,-5.935,0,300,-0.0198
+6,ppo,hunter,-9.006,0,300,-0.03
+7,ppo,hunter,-9.316,0,300,-0.0311
+8,ppo,hunter,-9.643,0,300,-0.0321
+9,ppo,hunter,-9.182,0,300,-0.0306
+10,ppo,hunter,-9.231,0,300,-0.0308
+

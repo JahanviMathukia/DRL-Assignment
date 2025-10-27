@@ -1,2 +1,11 @@
-timestamp,algo,persona,episodes,mean_reward,std_reward,mean_steps,success_rate,model_path
-2025-10-26 17:20:11,ppo,explorer,10,16.426,3.471,300.0,0.0,models/miniworld\ppo_miniworld_explorer_seed7.zip
+episode,algo,persona,reward,score,steps,mean_reward_per_step
+1,ppo,explorer,14.595,0,300,0.0486
+2,ppo,explorer,14.048,0,300,0.0468
+3,ppo,explorer,14.199,0,300,0.0473
+4,ppo,explorer,14.156,0,300,0.0472
+5,ppo,explorer,13.897,0,300,0.0463
+6,ppo,explorer,14.096,0,300,0.047
+7,ppo,explorer,14.011,0,300,0.0467
+8,ppo,explorer,14.019,0,300,0.0467
+9,ppo,explorer,14.025,0,300,0.0468
+10,ppo,explorer,14.154,0,300,0.0472

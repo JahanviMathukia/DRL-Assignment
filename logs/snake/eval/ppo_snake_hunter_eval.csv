@@ -1,4 +1,4 @@
-episode,reward,score,steps,mean_reward_per_step
+episode,algo,persona,reward,score,steps,mean_reward_per_step
 1,ppo,hunter,407.6,34,463,0.8803
 2,ppo,hunter,347.4,29,389,0.8931
 3,ppo,hunter,319.0,26,306,1.0425
