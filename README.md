@@ -4,6 +4,7 @@
 This repository implements a modular **Deep Reinforcement Learning (DRL)** framework for **automated testing** of applications and games.  
 Trained DRL agents (not scripted bots) explore environments, detect issues, and generate meaningful evaluation metrics using reproducible training setups.
 
+Video Link: https://youtu.be/AHDpzIOMFEQ
 ---
 
 ## 🎯 Project Overview
